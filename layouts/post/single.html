@@ -15,7 +15,17 @@
                     <div class="date" title='{{ .Date.Format "Mon Jan 2 2006 15:04:05 MST" }}'>{{ .Date.Format "Jan 2, 2006" }}</div>
                     {{ end }}
                     {{ if not .Site.Params.noshowreadtime }}
-		    <div class="reading-time"><div class="middot"></div>{{ i18n "readingTime" .ReadingTime }}</div>
+		              <div class="reading-time"><div class="middot"></div>{{ i18n "readingTime" .ReadingTime }}</div>
+                    {{ end }}
+                    {{ if .Params.author }}
+                        <div>
+                            <div class="middot"></div>
+                            {{ if .Params.authorLink }}
+                                <a href={{ printf "%s" $.Params.authorLink }}>{{.Params.author}}</a>
+                            {{ else }}
+                                {{.Params.author}}
+                            {{ end }}
+                        </div>
                     {{ end }}
                 </div>
             </div>
