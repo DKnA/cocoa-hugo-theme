@@ -113,12 +113,6 @@ section.header {
         .align-items(center);
     }
 
-    .avatar {
-        border-radius: 50%;
-        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
-        max-width: 50px;
-    }
-
     .name {
         .heading();
         .tt-upper();
@@ -301,6 +295,10 @@ section.main {
             .heading();
             .tt-upper();
             margin-bottom: floor(@vspacing/2);
+        }
+
+        .page-heading:hover {
+            .pink-hover()
         }
 
         .front-matter {
@@ -515,8 +513,4 @@ img.profile {
     min-width: 300px;
     max-width: 300px !important;
   }
-}
-
-.page-heading a {
-    color: @black;
 }

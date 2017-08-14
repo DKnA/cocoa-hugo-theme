@@ -173,11 +173,6 @@ section.header .content {
   -ms-align-items: center;
   align-items: center;
 }
-section.header .avatar {
-  border-radius: 50%;
-  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
-  max-width: 50px;
-}
 section.header .name {
   font-size: 18px;
   font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
@@ -388,6 +383,10 @@ section.main .content .page-heading {
   text-transform: uppercase;
   margin-bottom: 16px;
 }
+section.main .content .page-heading:hover {
+  color: rgba(255, 47, 21, 0.6);
+  transition: color 0.3s ease;
+}
 section.main .content .front-matter .page-heading {
   margin-bottom: 0;
 }
@@ -578,9 +577,6 @@ img.profile {
     max-width: 300px !important;
   }
 }
-.page-heading a {
-  color: #333;
-}
 section.main .content .markdown h1,
 section.main .content .markdown h2,
 section.main .content .markdown h3,
@@ -597,6 +593,15 @@ section.main .content .markdown h6 {
   color: #333;
   text-transform: none;
   margin-top: 1.75rem;
+}
+section.main .content .markdown h1:hover,
+section.main .content .markdown h2:hover,
+section.main .content .markdown h3:hover,
+section.main .content .markdown h4:hover,
+section.main .content .markdown h5:hover,
+section.main .content .markdown h6:hover {
+  color: rgba(255, 47, 21, 0.6);
+  transition: color 0.3s ease;
 }
 section.main .content .markdown h1 {
   font-size: 1.75rem;
